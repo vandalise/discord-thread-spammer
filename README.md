@@ -1,2 +1,2 @@
-# discord-thread-spammer
+# python3 discord-thread-spammer
 Only working discord thread spammer atm, supports multiple accounts
