@@ -22,9 +22,8 @@ def main(tokens, channelid, name):
 
 print(Fore.YELLOW)
 tokens = []
-amount_of_tokens = int(input("Amount of tokens: "))
-for i in range(amount_of_tokens):
-    tokens.append(input(f"Token: "))
+for token in open("tokens.txt", "r").read().splitlines():
+    tokens.append(token)
 channelid = input("Channel ID: ")
 name = input("Thread Name: ")
 main(tokens=tokens, channelid=channelid, name=name)
