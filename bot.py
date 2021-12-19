@@ -10,7 +10,7 @@ def main(tokens, channelid, name):
        for token in tokens:
             try:
                 threadname = f"{name} {randomstring()}"
-                r = requests.post(f"https://discord.com/api/v{random.randint(6,9)}/channels/{channelid}/threads", headers={"content-type": "application/json", "Authorization": token}, json={"name": threadname, "type": 11, "auto_archive_duration": 60})
+                r = requests.post(f"https://discord.com/api/v{random.randint(6,9)}/channels/{channelid}/threads", headers={"content-type": "application/json", "Authorization": token}, json={"name": threadname, "type": 11, "auto_archive_duration": 1440})
                 if r.status_code == 200 or r.status_code == 201:
                     print(f"{Fore.GREEN}[+] Created thread : {threadname}")
                 elif r.status_code == 429:
